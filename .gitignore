@@ -1,6 +1,8 @@
-.env
-.csv
-.py
-.env 
-.env 
-.env
+# Ignore everything
+*
+
+# Allow only these:
+!Qwen2.5vl_test.ipynb
+!README.md
+!images/
+!images/**
