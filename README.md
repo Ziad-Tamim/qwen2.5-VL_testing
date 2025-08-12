@@ -7,7 +7,7 @@ The goal of this test is to explore how well Qwen2.5-VL performs on **practical 
 - Describing images
 - Classifying visual attributes (e.g., age group)
 - Parsing financial statements
----
+
 ## What is Being Tested?
 I tested the model on five main scenarios:
 1. **Twitter profile info extraction** from a screenshot
@@ -20,14 +20,14 @@ These tasks were chosen to see how well the model handles:
 - Text extraction from images (pseudo-OCR)
 - Understanding and following structured prompts
 - Interpreting image context for descriptions and classification
----
+
 ## How It Works
 The workflow is:
 1. Prepare the prompt → a messages list containing both the image(s) and the task description as text.
 2. Process inputs → using Qwen’s AutoProcessor and process_vision_info to format images for the model.
 3. Run inference → model.generate() to get model outputs.
 4. Post-process → trim prompt tokens and decode the generated IDs into text or JSON.
----
+
 ## Test Prompts
 Here are the messages definitions for each task:
 
@@ -116,7 +116,7 @@ messages = [
 ]
 
 ```
----
+
 ## Requirements
 My test environment:
 - Python 3.10
@@ -130,7 +130,7 @@ Install:
 pip install transformers accelerate huggingface_hub pillow opencv-python
 ```
 
----
+#
 ## Results from My Testing
 - Not an OCR model → While Qwen2.5-VL can read text from images, it is not a dedicated OCR model.
 - Twitter handles with underscores → Often fails to detect underscores (@Ziad_tamim_ read as @ZiadTamim).
