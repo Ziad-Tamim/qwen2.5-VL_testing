@@ -130,7 +130,6 @@ Install:
 pip install transformers accelerate huggingface_hub pillow opencv-python
 ```
 
-#
 ## Results from My Testing
 - Not an OCR model → While Qwen2.5-VL can read text from images, it is not a dedicated OCR model.
 - Twitter handles with underscores → Often fails to detect underscores (@Ziad_tamim_ read as @ZiadTamim).
@@ -138,5 +137,4 @@ pip install transformers accelerate huggingface_hub pillow opencv-python
 - Receipts & bank statements → Reads values and dates accurately most of the time (≈ 90% success rate in my trials).
 - Descriptions → Excellent at describing scenes and identifying objects.
 - General rule → For best accuracy, use clear, high-quality images and explicit instructions in the text prompt.
-
 
